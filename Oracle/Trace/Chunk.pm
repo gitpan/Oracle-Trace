@@ -3,11 +3,10 @@
 #
 package Oracle::Trace::Chunk;
 
-use 5.008001;
+use 5.008000;
 use strict;
 use warnings;
 use Data::Dumper;
-use File::Data;
 use Oracle::Trace::Utils;
 
 our @ISA = qw(Oracle::Trace::Utils);

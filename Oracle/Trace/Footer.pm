@@ -3,11 +3,10 @@
 #
 package Oracle::Trace::Footer;
 
-use 5.008001;
+use 5.008000;
 use strict;
 use warnings;
 use Data::Dumper;
-use File::Data;
 use Oracle::Trace::Entry;
 
 our @ISA = qw(Oracle::Trace::Entry);

@@ -3,11 +3,10 @@
 #
 package Oracle::Trace::Utils;
 
-use 5.008001;
+use 5.008000;
 use strict;
 use warnings;
 use Data::Dumper;
-use File::Data;
 
 our $VERSION = do { my @r = (q$Revision: 1.3 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 

@@ -3,10 +3,11 @@
 #
 package Oracle::Trace;
 
-use 5.008001;
+use 5.008000;
 use strict;
 use warnings;
 use Data::Dumper;
+use FileHandle;
 use Oracle::Trace::Header;
 use Oracle::Trace::Entry;
 use Oracle::Trace::Footer;
