@@ -1,0 +1,13 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Trace.t
+tracefiles/test.trc
+Oracle/Trace.pm
+Oracle/Trace/Chunk.pm
+Oracle/Trace/Entry.pm
+Oracle/Trace/Footer.pm
+Oracle/Trace/Header.pm
+Oracle/Trace/Utils.pm
+META.yml                                 Module meta-data (added by MakeMaker)
