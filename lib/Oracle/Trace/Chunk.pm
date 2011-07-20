@@ -3,7 +3,7 @@
 #
 package Oracle::Trace::Chunk;
 
-use 5.008000;
+use 5.008001;
 use strict;
 use warnings;
 use Data::Dumper;

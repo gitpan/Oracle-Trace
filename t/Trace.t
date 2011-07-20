@@ -2,8 +2,11 @@
 # $Id: Trace.t,v 1.9 2003/12/24 20:38:54 oratrc Exp $
 #
 
+use strict;
+use warnings;
+
 use Data::Dumper;
-use Test::More tests => 8;
+use Test::More tests => 7;
 
 my $test = 'tracefiles/test.trc';
 
@@ -23,7 +26,7 @@ ok($s_hdr eq 'RFI', 'header->value')
 
 my $s_ftr = $o_test->footer->value('Instance name');
 ok(!defined($s_ftr), 'footer->value') 
-	or diag("s_ftr($s_ftr): ".Dumper(\@a_ftr));
+	or diag("s_ftr($s_ftr): ".Dumper($s_ftr));
 
 my $i_cnt = my @a_cnt = $o_test->entries;
 ok($i_cnt == 4, 'entries') 
@@ -34,15 +37,16 @@ ok($rep =~ /entries:\s+\d+\n/msi, 'test_report')
 	or diag("test_report: $rep");
 
 my ($o_one) = $o_test->entries;
+
 =pod
 my ($s_one) = $o_one->values('type'=>'other');
 ok($s_one =~ /alter session/, '$o_one->value("type"=>"other")')
 	or diag("o_one($o_one) s_one($s_one)");
-=cut
 
 my ($s_stmt) = $o_one->statement;
 ok($s_stmt eq $s_one, '$o_one->statment')
 	or diag("s_one($s_one) s_stmt($s_stmt)");
+=cut
 
 # my ($h_stmt) = $o_test->header->statement;
 # my ($f_stmt) = $o_test->footer->statement;

@@ -3,7 +3,7 @@
 #
 package Oracle::Trace;
 
-use 5.008000;
+use 5.008001;
 use strict;
 use warnings;
 use Data::Dumper;
@@ -15,7 +15,7 @@ use Oracle::Trace::Utils;
 
 our @ISA = qw(Oracle::Trace::Utils);
 
-our $VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 my $DEBUG      = $ENV{Oracle_Trace_DEBUG}    || 0;
 my $EXTENDED   = $ENV{Oracle_Trace_EXTENDED} || 0;
